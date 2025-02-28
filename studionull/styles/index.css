@@ -1,14 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-.inter {
-	font-family: "Inter", serif;
-	font-optical-sizing: auto;
-	font-style: normal;
-	letter-spacing: -0.05em;
+body {
+	display: flex;
+	flex-direction: column;
+	letter-spacing: -0.3px;
+	height: 100vh;
+	padding: 24px;
+	color: #888888;
 }
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+	row-gap: 32px;
+}
+
+.top-start {
+	display: flex;
+	column-gap: 48px;
+	row-gap: 24px;
+}
+
+.top-start > p {
+	color: #000000;
+	max-width: 320px;
+}
+
+.bottom {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.bottom-base {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.shoutout {
+	max-width: 800px;
+}
+
+@media (width <= 700px) {
+	.top-start {
+		flex-wrap: wrap;
+	}
+
+	.top-start > p {
+		max-width: none;
+	}
+
+	.top-end {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+/* JS Triggered Classes */
