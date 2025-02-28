@@ -88,3 +88,15 @@ article:first-child {
 	text-decoration: none;
 	border-bottom: 1px solid #000000;
 }
+
+.nav-link {
+	text-decoration: none;
+}
+
+.nav-link#info {
+	color: #888;
+}
+
+.nav-link#work {
+	color: #000000;
+}
