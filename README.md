@@ -6,4 +6,7 @@ This is a process of learning how to build really good interfaces and understand
 
 ## List
 
--> Studio:Null: A design agency
+→ Studio:Null: A design agency
+
+## Changes
+→ Design and Built a quick UI directory for all recreations
