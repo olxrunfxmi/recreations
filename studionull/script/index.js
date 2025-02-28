@@ -106,3 +106,37 @@ function generateProjectView() {
 
 	sectionTop.replaceChild(newTopStart, container);
 }
+
+const end = document.querySelector(".bottom");
+const content = [
+	"WE LOVE CREATING SEXY WEBSITES",
+	"WITH LOVE FROM LAGOS",
+	"WE DO DIGITAL DESIGN BRANDING & CREATIVE DIRECTION",
+	"AVAILABLE FOR NEW PROJECTS FROM JULY 2023",
+	"STICKER:NULL",
+];
+const classes = ["yellow", "magenta", "red", "green", "cyan"];
+const rotator = ["positive-turn", "negative-turn"];
+
+end.addEventListener("click", createRandomBox);
+
+// Functions
+
+function createRandomBox(e) {
+	const firstRandom = randomFive();
+	const secondRandom = randomFive();
+	const box = document.createElement("div");
+	box.classList.add("box");
+	box.classList.add(rotator[Math.round(Math.random())]);
+	box.classList.add(classes[firstRandom]);
+	box.textContent = content[secondRandom];
+
+	box.style.top = e.clientY + "px";
+	box.style.left = e.clientX + "px";
+
+	document.body.appendChild(box);
+}
+
+function randomFive() {
+	return Math.floor(Math.random() * 5);
+}

@@ -100,3 +100,46 @@ article:first-child {
 .nav-link#work {
 	color: #000000;
 }
+
+.box {
+	width: 220px;
+	height: 220px;
+	box-shadow: 4px 7px 4px rgba(32, 37, 32, 0.25);
+	color: #000;
+	font-size: 24px;
+	text-transform: uppercase;
+	position: absolute;
+	padding: 8px;
+}
+
+.yellow {
+	background-color: #ffff00;
+}
+
+.magenta {
+	background-color: #ff00ff;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+.green {
+	background-color: #00ff00;
+}
+
+.cyan {
+	background-color: #00ffff;
+}
+
+.positive-turn {
+	transform: rotate(4.78deg);
+}
+
+.negative-turn {
+	transform: rotate(-8.53deg);
+}
+
+body {
+	overflow: hidden;
+}
