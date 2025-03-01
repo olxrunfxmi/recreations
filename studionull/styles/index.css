@@ -12,6 +12,7 @@ body {
 	min-height: 100vh;
 	padding: 24px;
 	color: #888888;
+	overflow: hidden;
 }
 
 .top {
@@ -138,8 +139,4 @@ article:first-child {
 
 .negative-turn {
 	transform: rotate(-8.53deg);
-}
-
-body {
-	overflow: hidden;
 }

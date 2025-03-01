@@ -1,37 +1,19 @@
+// DOM References - CONSTANTS
 const links = document.querySelectorAll(".nav-link");
 const bottomBase = document.querySelector(".bottom-base");
-let view = "info";
-
+const end = document.querySelector(".bottom");
 const infoView = document.querySelector(".top-start");
 
-function generateInfoView() {
-	const old = infoView;
-
-	const sectionTop = document.querySelector(".top");
-	const container = document.querySelector(".top-start");
-
-	sectionTop.replaceChild(old, container);
-}
-
-links.forEach((link) => {
-	link.addEventListener("click", (e) => {
-		e.preventDefault();
-
-		if (link.id === "info" && view === "work") {
-			// Generate The Info View();
-			generateInfoView();
-			// Remove The Bottom Base
-			bottomBase.classList.toggle("disappear");
-			view = "info";
-		} else if (link.id === "work" && view === "info") {
-			generateProjectView();
-			// Add The Bottom Base
-			bottomBase.classList.toggle("disappear");
-			view = "work";
-		}
-	});
-});
-
+// Global Bindings - CONSTANTS
+const content = [
+	"WE LOVE CREATING SEXY WEBSITES",
+	"WITH LOVE FROM LAGOS",
+	"WE DO DIGITAL DESIGN BRANDING & CREATIVE DIRECTION",
+	"AVAILABLE FOR NEW PROJECTS FROM JULY 2023",
+	"STICKER:NULL",
+];
+const classes = ["yellow", "magenta", "red", "green", "cyan"];
+const rotator = ["positive-turn", "negative-turn"];
 const projects = [
 	{
 		name: "Korty",
@@ -68,6 +50,43 @@ const projects = [
 		href: "https://www.fayemi.design/",
 	},
 ];
+
+// Global Binding - Tracker
+let view = "info";
+
+// Actions
+// Create Random Colorful Boxes
+end.addEventListener("click", createRandomBox);
+
+// Adds Event Listeners to simulate single page view
+links.forEach((link) => {
+	link.addEventListener("click", (e) => {
+		e.preventDefault();
+
+		if (link.id === "info" && view === "work") {
+			// Generate The Info View();
+			generateInfoView();
+			// Remove The Bottom Base
+			bottomBase.classList.toggle("disappear");
+			view = "info";
+		} else if (link.id === "work" && view === "info") {
+			generateProjectView();
+			// Add The Bottom Base
+			bottomBase.classList.toggle("disappear");
+			view = "work";
+		}
+	});
+});
+
+// Functions
+function generateInfoView() {
+	const old = infoView;
+
+	const sectionTop = document.querySelector(".top");
+	const container = document.querySelector(".top-start");
+
+	sectionTop.replaceChild(old, container);
+}
 
 function generateProjectView() {
 	const sectionTop = document.querySelector(".top");
@@ -106,21 +125,6 @@ function generateProjectView() {
 
 	sectionTop.replaceChild(newTopStart, container);
 }
-
-const end = document.querySelector(".bottom");
-const content = [
-	"WE LOVE CREATING SEXY WEBSITES",
-	"WITH LOVE FROM LAGOS",
-	"WE DO DIGITAL DESIGN BRANDING & CREATIVE DIRECTION",
-	"AVAILABLE FOR NEW PROJECTS FROM JULY 2023",
-	"STICKER:NULL",
-];
-const classes = ["yellow", "magenta", "red", "green", "cyan"];
-const rotator = ["positive-turn", "negative-turn"];
-
-end.addEventListener("click", createRandomBox);
-
-// Functions
 
 function createRandomBox(e) {
 	const firstRandom = randomFive();
