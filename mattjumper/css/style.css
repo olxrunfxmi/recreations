@@ -120,7 +120,7 @@ h3 {
 
 /* Education Section Styling */
 .education {
-	padding: 48px;
+	padding: 200px 48px;
 }
 
 .video {
@@ -381,7 +381,7 @@ h3 {
 	.education,
 	.template,
 	.footer {
-		padding: 24px;
+		padding: 48px 24px;
 	}
 
 	.box-container {
