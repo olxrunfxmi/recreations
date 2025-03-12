@@ -4,11 +4,11 @@ const videoCircle = document.querySelector(".play_circle");
 const boxHover = document.querySelector(".box-hover");
 
 videoWrappers.forEach((videoWrapper) => {
-	const videoSrc = videoWrapper.querySelector("video");
+	const mediaSrc = videoWrapper.querySelector(".media");
 	const videoIcon = videoWrapper.querySelector(".play_circle");
 
-	videoSrc.addEventListener("mousemove", (e) => {
-		videoSrc.classList.add("overlay");
+	mediaSrc.addEventListener("mousemove", (e) => {
+		mediaSrc.classList.add("overlay");
 		videoIcon.classList.add("circle_visible");
 
 		boxHover.style.display = "inline";
@@ -18,8 +18,8 @@ videoWrappers.forEach((videoWrapper) => {
 		boxHover.style.left = `${e.clientX}px`;
 	});
 
-	videoSrc.addEventListener("mouseout", () => {
-		videoSrc.classList.remove("overlay");
+	mediaSrc.addEventListener("mouseout", () => {
+		mediaSrc.classList.remove("overlay");
 		videoIcon.classList.remove("circle_visible");
 		boxHover.style.display = "none";
 	});
