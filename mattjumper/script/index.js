@@ -12,6 +12,11 @@ videoWrappers.forEach((videoWrapper) => {
 		videoIcon.classList.add("circle_visible");
 
 		boxHover.style.display = "inline";
+		boxHover.textContent = "Watch";
+
+		if (videoIcon.id.slice(0, 4) === "temp") {
+			boxHover.textContent = "Demo";
+		}
 		// the value 20 prevents the cursor from clashing
 		// pageYOffset allows us to know how much scrolling as happened so we can add
 		boxHover.style.top = `${e.clientY - 20 + window.pageYOffset}px`;
