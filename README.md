@@ -12,6 +12,12 @@ Worked on creating the same layout across Desktop, Tablet and Mobile View using 
 
 Need to add the fading effect, animations for the single page transition, and align some text properly to make it more fluid.
 
+### → Matt Jumper: A Toronto Designer
+
+Created the same viewport design and some of the hover interactions. My hover effect interaction is a bit buggy, so I need to learn how to deal with event bubbling - I believe. I tried to do the same layout without media queries but I just had to for padding changes.
+
+Need to learn more about CSS Animations
+
 ## Changes
 
 → Design and Built a quick UI directory for all recreations
