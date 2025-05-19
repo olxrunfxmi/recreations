@@ -423,6 +423,7 @@
 
 	footer {
 		background: #f1f2f4;
+		padding-inline: 1rem;
 
 		.button-wrapper {
 			padding-block: 2rem;
@@ -478,5 +479,61 @@
 
 			margin-block-end: 3rem;
 		}
+	}
+
+	.read {
+		border-left: 1px solid var(--grey);
+		margin-inline-start: 1rem;
+		padding-inline-start: 36px;
+	}
+
+	.read-item,
+	.latest-item {
+		position: relative;
+		font-size: 15px;
+
+		h6 {
+			font-size: 15px;
+			font-weight: 500;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.read-item {
+		padding-block-end: 1.5rem;
+
+		.marker-wrap {
+			width: 40px;
+			height: 40px;
+			background: var(--white);
+			padding: 8px;
+		}
+
+		.list-marker {
+			background: #131415;
+			color: var(--white);
+
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			font-size: 14px;
+			font-weight: 600;
+
+			display: grid;
+			place-content: center;
+		}
+
+		&:last-of-type {
+			padding-block-end: 0;
+		}
+	}
+
+	.marker-wrap {
+		position: absolute;
+		top: -10px;
+		left: -56px;
 	}
 }
