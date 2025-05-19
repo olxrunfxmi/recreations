@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             <li>Venajan hyokkays</li>
             <li>Jaakiekon MM-kisat</li>
             <li>Euroviisut</li>
-            <li class="login">Login <span><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+            <li class="login"><span class="text">Login</span> <span><svg width="25" height="25" viewBox="0 0 25 25"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_118_3481" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                             width="25" height="25">
                             <rect x="0.205078" y="0.914062" width="24" height="24" fill="#D9D9D9" />
@@ -34,7 +35,7 @@
                                 fill="#1C1B1F" />
                         </g>
                     </svg></span></li>
-            <li>Search <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <li><span class="text">Search</span> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_118_3487" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                             width="24" height="24">
@@ -46,7 +47,7 @@
                                 fill="#1C1B1F" />
                         </g>
                     </svg></span></li>
-            <li>Menu <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <li><span class="text">Menu</span> <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_118_3493" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                             width="24" height="24">
@@ -60,7 +61,7 @@
         </ul>
     </header>
     <section>
-        <header class="sticky-header">
+        <header class="sticky-header" data-state="inactive">
             <ul class="link-bar sticky-bar">
                 <li><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +86,7 @@
                                     d="M2.5 21.0385V4.30775C2.5 3.80258 2.675 3.375 3.025 3.025C3.375 2.675 3.80258 2.5 4.30775 2.5H19.6923C20.1974 2.5 20.625 2.675 20.975 3.025C21.325 3.375 21.5 3.80258 21.5 4.30775V15.6923C21.5 16.1974 21.325 16.625 20.975 16.975C20.625 17.325 20.1974 17.5 19.6923 17.5H6.0385L2.5 21.0385ZM5.4 16H19.6923C19.7693 16 19.8398 15.9679 19.9038 15.9038C19.9679 15.8398 20 15.7693 20 15.6923V4.30775C20 4.23075 19.9679 4.16025 19.9038 4.09625C19.8398 4.03208 19.7693 4 19.6923 4H4.30775C4.23075 4 4.16025 4.03208 4.09625 4.09625C4.03208 4.16025 4 4.23075 4 4.30775V17.3848L5.4 16Z"
                                     fill="#1C1B1F" />
                             </g>
-                        </svg></span> Read Comments (4)</li>
+                        </svg></span> <span class="text">Read Comments (4)</span> <span class="hidden">4</span> </li>
                 <li><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_121_3511" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -412,7 +413,7 @@
                     <div class="latest-wrapper">
                         <ol class="latest" role="list">
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">14:00</span>
+                                <div class="marker-wrap"><span class="list-marker">14:00</span>
                                 </div>
                                 <a href="">
                                     <h6>Politics</h6>
@@ -421,7 +422,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">12:39</span>
+                                <div class="marker-wrap"><span class="list-marker">12:39</span>
                                 </div>
                                 <a href="">
                                     <h6>Transport</h6>
@@ -430,7 +431,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">12:02</span>
+                                <div class="marker-wrap"><span class="list-marker">12:02</span>
                                 </div>
                                 <a href="">
                                     <h6>Foreign Policy</h6>
@@ -439,7 +440,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">09:47</span>
+                                <div class="marker-wrap"><span class="list-marker">09:47</span>
                                 </div>
                                 <a href="">
                                     <h6>Media</h6>
@@ -449,7 +450,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">18.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">18.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Foreign policy</h6>
@@ -458,7 +459,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">18.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">18.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
@@ -467,7 +468,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">18.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">18.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Society</h6>
@@ -476,7 +477,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">18.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">18.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Entertainment</h6>
@@ -485,7 +486,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
@@ -494,7 +495,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
@@ -503,7 +504,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
@@ -512,7 +513,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
@@ -521,7 +522,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Transport</h6>
@@ -530,7 +531,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Security</h6>
@@ -539,7 +540,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Transport</h6>
@@ -548,7 +549,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">17.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">17.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Transport</h6>
@@ -557,7 +558,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>All Points North</h6>
@@ -567,7 +568,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Working life</h6>
@@ -577,7 +578,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Education</h6>
@@ -586,7 +587,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Crime</h6>
@@ -595,7 +596,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Crime</h6>
@@ -604,7 +605,7 @@
                             </li>
 
                             <li class="latest-item">
-                                <div class="marker-wrap alternate"><span class="list-marker alternate">16.5.</span>
+                                <div class="marker-wrap"><span class="list-marker">16.5.</span>
                                 </div>
                                 <a href="">
                                     <h6>Domestic news</h6>
