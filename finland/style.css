@@ -414,7 +414,7 @@
 		h6 {
 			grid-row: 2;
 			grid-column: 1;
-			font-size: 20px;
+			font-size: 17px;
 			letter-spacing: 0px;
 		}
 
@@ -435,7 +435,7 @@
 			grid-row: 1/5;
 			border-radius: 8px;
 			justify-self: self-start;
-			width: clamp(160px, 15vw, 200px);
+			width: clamp(100px, 25vw, 200px);
 			aspect-ratio: 3/2;
 			object-fit: cover;
 		}
@@ -629,6 +629,19 @@
 
 			.comment .hidden {
 				display: inline;
+			}
+		}
+
+		.info {
+			img {
+				width: 90px;
+				aspect-ratio: 1/1;
+			}
+		}
+
+		.roundup-info-bar {
+			img {
+				aspect-ratio: 1/1;
 			}
 		}
 	}
