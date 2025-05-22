@@ -408,7 +408,7 @@
 		.input-area {
 			padding: 2rem;
 			text-align: center;
-			max-width: 760px;
+			max-width: min(calc(100vw - 260px), 760px);
 			margin-inline: auto;
 
 			h1 {
@@ -434,6 +434,7 @@
 					font-size: 16px;
 					font-weight: 300;
 					position: relative;
+                    z-index: 1;
 
 					&[data-contains="contains"]::before {
 						display: none;
@@ -537,13 +538,19 @@
 			display: none;
 		}
 
+        .input-area {
+			max-width: min(calc(100vw), 760px);
+        }
+
 		.side-bar {
 			&[data-view="mobile"] {
 				display: block;
-				/* position: absolute; */
+				position: absolute;
 				top: 0;
 				left: 0;
-                max-width: 260px;
+				max-width: 260px;
+				height: 100vh;
+                z-index: 2;
 			}
 		}
 
