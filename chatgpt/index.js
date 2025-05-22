@@ -4,6 +4,7 @@ const toggleBarEls = document.querySelectorAll(".toggle-menu");
 const sideBarEl = document.querySelector(".side-bar");
 const actionViewEl = sideBarEl.nextElementSibling;
 const mobileMenuEls = document.querySelectorAll(".menu");
+const dropdownButtonEls = document.querySelectorAll("#model-type");
 
 input.addEventListener("keydown", (e) => {
 	const pattern = /\b[\w]\b|[\W]/; // Lovely that I learned regex, eh
@@ -31,5 +32,13 @@ mobileMenuEls.forEach((mobileMenuEl) => {
 	mobileMenuEl.addEventListener("click", () => {
 		sideBarEl.dataset.view =
 			sideBarEl.dataset.view === "mobile" ? "desktop" : "mobile";
+	});
+});
+
+dropdownButtonEls.forEach((dropdownButtonEl) => {
+	dropdownButtonEl.addEventListener("click", () => {
+		const dropdownEl = dropdownButtonEl.nextElementSibling;
+		dropdownEl.dataset.open =
+			dropdownEl.dataset.open === "true" ? "false" : "true";
 	});
 });
