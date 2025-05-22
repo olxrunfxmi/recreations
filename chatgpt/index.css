@@ -233,11 +233,20 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-block: 0.75rem;
+			padding-block: 0.75rem;
 
-			.icon:nth-child(2) {
+			.menu {
+				display: none;
+			}
+
+			.icon:nth-child(3) {
 				margin-inline-start: auto;
 			}
+
+			position: sticky;
+			background: #f9f9f9;
+			top: 0;
+			z-index: 10;
 		}
 
 		.bar {
@@ -271,7 +280,7 @@
 			font-weight: 600;
 			padding: 8px 6px;
 			position: sticky;
-			top: 0;
+			top: 60px;
 			background-color: #f9f9f9;
 		}
 
@@ -284,8 +293,8 @@
 
 		.pin-wrapper {
 			background: #f9f9f9;
-			padding-block: 12px;
-			position: fixed;
+			padding-block: 8px;
+			position: sticky;
 			bottom: 0;
 		}
 
@@ -434,7 +443,7 @@
 					font-size: 16px;
 					font-weight: 300;
 					position: relative;
-                    z-index: 1;
+					z-index: 1;
 
 					&[data-contains="contains"]::before {
 						display: none;
@@ -538,9 +547,9 @@
 			display: none;
 		}
 
-        .input-area {
+		.input-area {
 			max-width: min(calc(100vw), 760px);
-        }
+		}
 
 		.side-bar {
 			&[data-view="mobile"] {
@@ -550,12 +559,19 @@
 				left: 0;
 				max-width: 260px;
 				height: 100vh;
-                z-index: 2;
+				z-index: 2;
+			}
+
+			&[data-state="visible"][data-view="desktop"] {
+				transform: translateX(-100%);
+				transition: transform 0.4s;
+				transition-behavior: allow-discrete;
+				/* Hotfix */
 			}
 		}
 
 		.menu {
-			display: block;
+			display: grid;
 			margin-inline-end: auto;
 		}
 

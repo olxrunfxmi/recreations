@@ -3,7 +3,7 @@ const svgEl = document.querySelector(".icon.filled");
 const toggleBarEls = document.querySelectorAll(".toggle-menu");
 const sideBarEl = document.querySelector(".side-bar");
 const actionViewEl = sideBarEl.nextElementSibling;
-const mobileMenuEl = document.querySelector(".menu");
+const mobileMenuEls = document.querySelectorAll(".menu");
 
 input.addEventListener("keydown", (e) => {
 	const pattern = /\b[\w]\b|[\W]/; // Lovely that I learned regex, eh
@@ -24,5 +24,12 @@ toggleBarEls.forEach((toggleBarEl) => {
 			sideBarEl.dataset.state === "out-of-view" ? "visible" : "out-of-view";
 		actionViewEl.dataset.state =
 			actionViewEl.dataset.state === "full-view" ? "half-view" : "full-view";
+	});
+});
+
+mobileMenuEls.forEach((mobileMenuEl) => {
+	mobileMenuEl.addEventListener("click", () => {
+		sideBarEl.dataset.view =
+			sideBarEl.dataset.view === "mobile" ? "desktop" : "mobile";
 	});
 });
