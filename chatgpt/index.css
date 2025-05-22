@@ -108,6 +108,7 @@
 	.container {
 		display: flex;
 		height: 100vh;
+		position: relative;
 
 		.side-bar {
 			flex-grow: 0;
@@ -122,6 +123,27 @@
 
 			background-color: #f9f9f9;
 			position: relative;
+
+			&[data-state="out-of-view"] {
+				display: none;
+				transform: translateX(-100%);
+				transition: transform 0.4s, display 0.4s;
+				transition-behavior: allow-discrete;
+			}
+
+			&[data-state="visible"] {
+				display: block;
+				opacity: 1;
+				transform: translateX(0);
+				transition: opacity 0.4s, transform 0.4s, display 0.4s;
+				transition-behavior: allow-discrete;
+
+				@starting-style {
+					opacity: 0;
+					/* display: none; */
+					transform: translateX(-100%);
+				}
+			}
 		}
 
 		.main-action {
@@ -132,6 +154,20 @@
 
 			display: grid;
 			grid-template-rows: auto 1fr;
+
+			.toggle-menu,
+			.create {
+				display: none;
+			}
+
+			&[data-state="full-view"] {
+				.toggle-menu,
+				.create {
+					display: grid;
+					transition: display 0.4s;
+					transition-behavior: allow-discrete;
+				}
+			}
 		}
 
 		.icon {
@@ -139,6 +175,8 @@
 			height: 36px;
 			display: grid;
 			place-content: center;
+			border: none;
+			background: transparent;
 
 			svg {
 				width: 24px;
@@ -298,7 +336,7 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 12px;
-			gap: 8px;
+			/* gap: 8px; */
 
 			.menu,
 			.temporary {
@@ -312,6 +350,7 @@
 				display: flex;
 				align-items: center;
 				padding: 8px 14px;
+				margin-inline-end: 8px;
 
 				.icon,
 				svg {
@@ -341,12 +380,21 @@
 			border: none;
 			font-size: 18px;
 			padding: 6px 12px;
+			border-radius: 32px;
 
 			.icon,
 			svg {
 				width: 18px;
 				height: 18px;
 			}
+
+			.icon:hover {
+				background: unset;
+			}
+		}
+
+		#model-type:hover {
+			background: #f9f9f9;
 		}
 
 		.model-list {
@@ -417,7 +465,7 @@
 					}
 
 					.icon:hover {
-						background-color: #fafafa;
+						background: #f1f1f1;
 						border-radius: 50%;
 					}
 
@@ -483,8 +531,20 @@
 	@media (width <=770px) {
 		.side-bar,
 		.btn,
-		.profile {
+		.profile,
+		.toggle-menu,
+		.create {
 			display: none;
+		}
+
+		.side-bar {
+			&[data-view="mobile"] {
+				display: block;
+				/* position: absolute; */
+				top: 0;
+				left: 0;
+                max-width: 260px;
+			}
 		}
 
 		.menu {
@@ -506,8 +566,8 @@
 		.input-area {
 			display: flex;
 			flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
+			justify-content: space-between;
+			height: 100%;
 		}
 	}
 }
