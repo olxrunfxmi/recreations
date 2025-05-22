@@ -28,6 +28,15 @@ const recreations = [
 		mainURL: "https://yle.fi/a/74-20158886",
 		recreationURL: "./finland/index.html",
 	},
+	{
+		name: "ChatGPT",
+		details:
+			"An AI chatbot to answer questions, create images and do 'deep research' by OpenAI",
+		src: "https://ik.imagekit.io/ndtwmeq4p/chatgpt.png?updatedAt=1747935448643",
+		alt: "OpenAI ChatGPT",
+		mainURL: "https://chatgpt.com",
+		recreationURL: "./chatgpt/index.html",
+	},
 ];
 
 generateRecreations(recreations);
