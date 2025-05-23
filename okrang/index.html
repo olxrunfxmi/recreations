@@ -17,8 +17,95 @@
 <body>
 
     <section id="features">
-        <h2>How Okra powers businesses</h2>
-        <p>A single API for multiple use cases across industries.</p>
+        <div class="wrapper">
+            <h2>How Okra powers businesses</h2>
+            <p>A single API for multiple use cases across industries.</p>
+
+            <div class="feature-grid">
+                <article class="feature-item">
+                    <a href="" class="link-area">
+                        <img src="https://okra.ng/icons/lending.svg" alt="lending icon">
+
+                        <span class="subtext">Lending</span>
+                        <h5><span class="link-change">Give out loans confidently</span></h5>
+                        <p>Match customers with sustainable loans in real-time, and lower your default rates.</p>
+                    </a>
+                </article>
+                <article class="feature-item">
+                    <a href="" class="link-area">
+                        <img src="https://okra.ng/icons/digital-banks.svg" alt="digital banking icon">
+
+                        <span class="subtext">Digital Banks</span>
+                        <h5><span class="link-change">Access crucial building blocks</span></h5>
+                        <p>Go to market faster with preset features needed to set up with your digital bank.</p>
+                    </a>
+                </article>
+                <article class="feature-item">
+                    <a href="" class="link-area">
+                        <img src="https://okra.ng/icons/personal-finance.svg" alt="personal finance icon">
+
+                        <span class="subtext">Personal finance</span>
+                        <h5><span class="link-change">Design personalised experiences</span></h5>
+                        <p>Build tailored finance management experiences for each user with their financial information.
+                        </p>
+                    </a>
+                </article>
+                <article class="feature-item">
+                    <a href="" class="link-area">
+                        <img src="https://okra.ng/icons/remittance.svg" alt="remittance icon">
+
+                        <span class="subtext">Remittance</span>
+                        <h5><span class="link-change">Make payments with ease</span></h5>
+                        <p>Leverage bank-to-bank payments to boost conversions and increase your revenue.</p>
+                    </a>
+                </article>
+                <article class="feature-item">
+                    <a href="" class="link-area">
+                        <img src="https://okra.ng/icons/financial-management.svg" alt="remittance icon">
+
+                        <span class="subtext">Business finance</span>
+                        <h5><span class="link-change">Plan for the future</span></h5>
+                        <p>Use real-time data insights to make budgeting and future planning decisions.</p>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore">
+        <div class="wrapper">
+            <div class="explore-start">
+                <h2>One API for all financial data</h2>
+                <p>Implement any or all of Okra's products with just a few lines of code in any language!</p>
+                <button class="btn big">Explore Okra docs</button>
+            </div>
+            <div class="explore-end code-container">
+                <pre>
+                    <code>
+    import Okra from 'okra-js'
+    ​
+    Okra.buildWithOptions({
+    name: 'Peter the builder',
+    env: 'production-sandbox',
+    key: '', //Your key from okra dashboard
+    token: '', //Your token from okra dashboard
+    onSuccess: function(data){
+    console.log('options close')
+    },
+    onClose: function(data){
+    console.log('options close', data)
+    }
+    })
+    ​
+    Okra.buildWithShortUrl({
+    short_url: '', //Your short url from the app builder
+    })
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
     </section>
 
     <div class="cookies">
@@ -31,75 +118,76 @@
     </div>
 
     <footer class="footer">
-        <div class="logo-socials">
-            <img class="logo" src="https://okra.ng/logo/logo.svg" alt="">
-
-            <div class="socials">
-                <img src="https://okra.ng/icons/twitter.svg" alt="">
-                <img src="https://okra.ng/icons/linkedin.svg" alt="">
-                <img src="https://okra.ng/icons/github.svg" alt="">
-                <img src="https://okra.ng/icons/slack-bw.svg" alt="">
+        <div class="wrapper">
+            <div class="logo-socials">
+                <img class="logo" src="https://okra.ng/logo/logo.svg" alt="">
+                <div class="socials">
+                    <img src="https://okra.ng/icons/twitter.svg" alt="">
+                    <img src="https://okra.ng/icons/linkedin.svg" alt="">
+                    <img src="https://okra.ng/icons/github.svg" alt="">
+                    <img src="https://okra.ng/icons/slack-bw.svg" alt="">
+                </div>
             </div>
+            <div class="footer-columns">
+                <div class="products">
+                    <dl class="footer-group">
+                        <dt>Products</dt>
+                        <dd><a href="" class="link">Authentication</a></dd>
+                        <dd><a href="" class="link">Balance</a></dd>
+                        <dd><a href="" class="link">Transactions</a></dd>
+                        <dd><a href="" class="link">Payments</a></dd>
+                        <dd><a href="" class="link">Identity</a></dd>
+                        <dd><a href="" class="link">Income</a></dd>
+                        <dd><a href="" class="link">Links</a></dd>
+                        <dd><a href="" class="link">Selfie verification</a></dd>
+                        <dd><a href="" class="link">Guarantors</a></dd>
+                        <dd><a href="" class="link">Spending patterns</a></dd>
+                        <dd><a href="" class="link">Revenue</a></dd>
+                        <dd><a href="" class="link">Complete view</a></dd>
+                        <dd><a href="" class="link">Pricing</a></dd>
+                    </dl>
+                </div>
+                <div class="case-dev">
+                    <dl class="footer-group">
+                        <dt>Use Cases</dt>
+                        <dd><a href="" class="link">Lending</a></dd>
+                        <dd><a href="" class="link">Personal finance</a></dd>
+                        <dd><a href="" class="link">Digital banks</a></dd>
+                        <dd><a href="" class="link">Remittance</a></dd>
+                        <dd><a href="" class="link">Business finance</a></dd>
+                    </dl>
+                    <dl class="footer-group">
+                        <dt>Developers</dt>
+                        <dd><a href="" class="link">Get started</a></dd>
+                        <dd><a href="" class="link">Developer docs</a></dd>
+                        <dd><a href="" class="link">API reference</a></dd>
+                        <dd><a href="" class="link">Libraries and SDKs</a></dd>
+                        <dd><a href="" class="link">Developer community</a></dd>
+                        <dd><a href="" class="link">API status</a></dd>
+                    </dl>
+                </div>
+                <div class="company-legal">
+                    <dl class="footer-group">
+                        <dt>Company</dt>
+                        <dd><a href="" class="link">Careers</a></dd>
+                        <dd><a href="" class="link">Customers</a></dd>
+                        <dd><a href="" class="link">For consumers</a></dd>
+                        <dd><a href="" class="link">Contact us</a></dd>
+                        <dd><a href="" class="link">Blog</a></dd>
+                    </dl>
+                    <dl class="footer-group">
+                        <dt>Legal</dt>
+                        <dd><a href="" class="link">Developer policy</a></dd>
+                        <dd><a href="" class="link">Privacy Policy</a></dd>
+                        <dd><a href="" class="link">Okra IMS</a></dd>
+                        <dd><a href="" class="link">Cookie policy</a></dd>
+                        <dd><a href="" class="link">End user agreement</a></dd>
+                        <dd><a href="" class="link">End user privacy policy</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <p>© 2025 Okra, Inc.</p>
         </div>
-        <div class="footer-columns">
-            <div class="products">
-                <dl class="footer-group">
-                    <dt>Products</dt>
-                    <dd><a href="" class="link">Authentication</a></dd>
-                    <dd><a href="" class="link">Balance</a></dd>
-                    <dd><a href="" class="link">Transactions</a></dd>
-                    <dd><a href="" class="link">Payments</a></dd>
-                    <dd><a href="" class="link">Identity</a></dd>
-                    <dd><a href="" class="link">Income</a></dd>
-                    <dd><a href="" class="link">Links</a></dd>
-                    <dd><a href="" class="link">Selfie verification</a></dd>
-                    <dd><a href="" class="link">Guarantors</a></dd>
-                    <dd><a href="" class="link">Spending patterns</a></dd>
-                    <dd><a href="" class="link">Revenue</a></dd>
-                    <dd><a href="" class="link">Complete view</a></dd>
-                    <dd><a href="" class="link">Pricing</a></dd>
-                </dl>
-            </div>
-            <div class="case-dev">
-                <dl class="footer-group">
-                    <dt>Use Cases</dt>
-                    <dd><a href="" class="link">Lending</a></dd>
-                    <dd><a href="" class="link">Personal finance</a></dd>
-                    <dd><a href="" class="link">Digital banks</a></dd>
-                    <dd><a href="" class="link">Remittance</a></dd>
-                    <dd><a href="" class="link">Business finance</a></dd>
-                </dl>
-                <dl class="footer-group">
-                    <dt>Developers</dt>
-                    <dd><a href="" class="link">Get started</a></dd>
-                    <dd><a href="" class="link">Developer docs</a></dd>
-                    <dd><a href="" class="link">API reference</a></dd>
-                    <dd><a href="" class="link">Libraries and SDKs</a></dd>
-                    <dd><a href="" class="link">Developer community</a></dd>
-                    <dd><a href="" class="link">API status</a></dd>
-                </dl>
-            </div>
-            <div class="company-legal">
-                <dl class="footer-group">
-                    <dt>Company</dt>
-                    <dd><a href="" class="link">Careers</a></dd>
-                    <dd><a href="" class="link">Customers</a></dd>
-                    <dd><a href="" class="link">For consumers</a></dd>
-                    <dd><a href="" class="link">Contact us</a></dd>
-                    <dd><a href="" class="link">Blog</a></dd>
-                </dl>
-                <dl class="footer-group">
-                    <dt>Legal</dt>
-                    <dd><a href="" class="link">Developer policy</a></dd>
-                    <dd><a href="" class="link">Privacy Policy</a></dd>
-                    <dd><a href="" class="link">Okra IMS</a></dd>
-                    <dd><a href="" class="link">Cookie policy</a></dd>
-                    <dd><a href="" class="link">End user agreement</a></dd>
-                    <dd><a href="" class="link">End user privacy policy</a></dd>
-                </dl>
-            </div>
-        </div>
-        <p>© 2025 Okra, Inc.</p>
     </footer>
 </body>
 
