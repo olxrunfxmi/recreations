@@ -133,6 +133,8 @@
 		right: 24px;
 		margin-inline: auto;
 
+		z-index: 3;
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -330,7 +332,7 @@
 			}
 
 			.code-container {
-				min-width: 370px;
+				min-width: min(370px, 100%);
 				overflow-x: auto;
 
 				&::-webkit-scrollbar {
@@ -345,6 +347,64 @@
 					background: #8f9db4;
 				}
 			}
+		}
+	}
+
+	#build {
+		background: var(--dark-blue);
+		color: var(--white);
+		position: relative;
+		overflow: hidden;
+
+		h2 {
+			font-size: 55px;
+			text-align: center;
+			margin-block-start: 0;
+			margin-block-end: 48px;
+		}
+
+		.info-container {
+			border-top: 1px solid #54667f;
+			border-bottom: 1px solid #54667f;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 18px 40px 32px;
+
+			.info-block {
+				p {
+					font-size: 14px;
+					text-align: center;
+					margin: 0;
+					color: var(--grey-stroke);
+				}
+
+				p:first-child {
+					font-size: 48px;
+					font-weight: 700;
+					letter-spacing: 0;
+					color: var(--white);
+					margin-inline-start: 12px;
+				}
+			}
+		}
+
+		&::before {
+			content: url("https://okra.ng/svgs/metrics-pattern2.svg");
+			position: absolute;
+			top: -84px;
+			right: -44px;
+			z-index: 2;
+		}
+
+		&::after {
+			content: url("https://okra.ng/svgs/metrics-pattern.svg");
+			position: absolute;
+			left: -24px;
+			bottom: -52px;
+			z-index: 2;
 		}
 	}
 
@@ -428,5 +488,29 @@
 		.company-legal {
 			grid-column: 3;
 		}
+	}
+
+	.info-container {
+		padding: 18px 0 32px;
+        gap: 24px;
+        
+        .info-block {
+            flex-basis: calc((100% - 24px) / 2);
+            align-self: self-start;
+    
+            p {
+                font-size: 13px;
+            }
+    
+            p:first-child {
+                font-size: 24px;
+            }
+        }
+	}
+
+
+	#build::before,
+	#build::after {
+		display: none;
 	}
 }
