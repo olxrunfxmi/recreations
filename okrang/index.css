@@ -361,6 +361,17 @@
 			text-align: center;
 			margin-block-start: 0;
 			margin-block-end: 48px;
+			color: transparent;
+			background: linear-gradient(
+				90deg,
+				#2aad86 20%,
+				#c0fc72 40%,
+				#c0fc72 60%,
+				#2aad86 80%
+			);
+			background-clip: text;
+			background-size: 200%;
+			animation: gradient-text 3s linear infinite;
 		}
 
 		.info-container {
@@ -478,6 +489,12 @@
 	}
 }
 
+@keyframes gradient-text {
+	to {
+		background-position: -200%;
+	}
+}
+
 @media (width <= 700px) {
 	.footer-columns {
 		.case-dev {
@@ -492,22 +509,21 @@
 
 	.info-container {
 		padding: 18px 0 32px;
-        gap: 24px;
-        
-        .info-block {
-            flex-basis: calc((100% - 24px) / 2);
-            align-self: self-start;
-    
-            p {
-                font-size: 13px;
-            }
-    
-            p:first-child {
-                font-size: 24px;
-            }
-        }
-	}
+		gap: 24px;
 
+		.info-block {
+			flex-basis: calc((100% - 24px) / 2);
+			align-self: self-start;
+
+			p {
+				font-size: 13px;
+			}
+
+			p:first-child {
+				font-size: 24px;
+			}
+		}
+	}
 
 	#build::before,
 	#build::after {
