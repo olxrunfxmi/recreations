@@ -392,33 +392,35 @@
 		.product-frame {
 			margin-block-start: 32px;
 			display: flex;
-			gap: 32px;
+			gap: clamp(20px, 3.25vw, 32px);
 			overflow-x: auto;
 			scrollbar-width: none;
-			margin-inline: -66px;
+			/* margin-inline: -66px; */
+			margin-inline: calc(clamp(16px, calc(5vw - 1.5rem), 66px) * -1);
 
 			& > * {
 				flex: 1 0 80%;
 			}
 
 			.product {
-				padding-inline: 56px;
-				padding-block-start: 56px;
+				min-width: 300px;
+				padding-inline: clamp(24px, 5vw, 56px);
+				padding-block-start: clamp(40px, 6vw, 56px);
 				background: var(--grey);
-				border-radius: 24px;
+				border-radius: clamp(8px, 2.5vw, 24px);
 				position: relative;
 
 				&:first-child {
-					margin-inline-start: 66px;
+					margin-inline-start: calc(clamp(16px, calc(5vw - 1.5rem), 66px));
 				}
 
 				&:last-child {
-					margin-inline-end: 66px;
+					margin-inline-end: calc(clamp(16px, calc(5vw - 1.5rem), 66px));
 				}
 
 				h3 {
-					font-size: 32px;
-					margin-block: 16px;
+					font-size: clamp(20px, calc(0.75rem + 1vw), 32px);
+					margin-block: clamp(6px, 2vw, 16px);
 					color: var(--dark-blue-overlay);
 				}
 
@@ -426,10 +428,11 @@
 					span {
 						text-transform: uppercase;
 						font-weight: 600;
+						font-size: clamp(14px, 1vw, 16px);
 					}
 
 					p {
-						font-size: 15px;
+						font-size: 14px;
 						margin-block-end: 24px;
 					}
 				}
@@ -446,11 +449,11 @@
 					.clients {
 						display: flex;
 						align-items: center;
-						gap: 24px;
+						gap: clamp(8px, 3vw, 24px);
 						margin-block-start: 24px;
 
 						img {
-							width: 112px;
+							width: clamp(75px, 10vw, 112px);
 						}
 					}
 				}
@@ -463,6 +466,9 @@
 
 					img {
 						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: top left;
 					}
 				}
 
@@ -940,7 +946,7 @@
 	}
 }
 
-@media (width >= 1200px) {
+@media (width >= 1120px) {
 	.product-list {
 		display: block;
 	}

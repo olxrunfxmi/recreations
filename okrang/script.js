@@ -26,7 +26,9 @@ productFrameEl.addEventListener("scroll", () => {
 		if (i === index) {
 			ballEl.dataset.status = "active";
 		} else if (index === -1 && i === 0) {
-			ballEll.dataset.status = "active";
+			ballEl.dataset.status = "active";
+		} else if (index === 6 && i === 5) {
+			ballEl.dataset.status = "active";
 		} else {
 			ballEl.dataset.status = "inactive";
 		}
