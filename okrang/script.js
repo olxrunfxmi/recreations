@@ -2,6 +2,8 @@ const cookieButtonEl = document.querySelector("#cookie");
 const heroImagesEl = document.querySelector(".hero-end");
 const productFrameEl = document.querySelector(".product-frame");
 const ballEls = document.querySelectorAll(".ball");
+const productListEl = document.querySelector(".product-list");
+const listEls = productListEl.querySelectorAll("li");
 
 cookieButtonEl.addEventListener("click", (e) => {
 	const cookieEl = e.currentTarget.parentElement;
@@ -33,4 +35,25 @@ productFrameEl.addEventListener("scroll", () => {
 			ballEl.dataset.status = "inactive";
 		}
 	});
+});
+
+productListEl.addEventListener("click", (e) => {
+	if (e.target.closest("li")) {
+		const clickedListEl = e.target.closest("li");
+
+		listEls.forEach((listEl) => {
+			listEl.dataset.state = "inactive";
+		});
+
+		clickedListEl.dataset.state = "active";
+		const factor = Number(clickedListEl.dataset.num) - 1;
+
+		const firstProductEl = document.querySelector(".product");
+		const productDetails = firstProductEl.getBoundingClientRect();
+
+		const productWidth = productDetails.width;
+		const transformValue = productWidth * factor + 32 * factor;
+
+		firstProductEl.parentElement.style.setProperty("--diff", transformValue);
+	}
 });

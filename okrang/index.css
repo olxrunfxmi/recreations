@@ -969,6 +969,18 @@
 		padding: 0;
 		list-style: none;
 
+		li[data-state="active"] {
+			.circle {
+				border: 2px solid var(--green);
+
+				.dot {
+					transform: scale(1.25);
+					transition: transform 0.2s ease-in;
+					background: var(--green);
+				}
+			}
+		}
+
 		button {
 			background: transparent;
 			border: none;
@@ -990,22 +1002,13 @@
 				border-radius: 50%;
 				display: grid;
 				place-content: center;
+				border: 0px solid var(--green);
 
 				.dot {
 					width: 10px;
 					height: 10px;
 					background: var(--grey-stroke);
 					border-radius: 50%;
-				}
-
-				&[data-state="active"] {
-					border: 2px solid var(--green);
-
-					.dot {
-						transform: scale(1.25);
-                        transition: transform 0.4s ease-in;
-						background: var(--green);
-					}
 				}
 			}
 		}
@@ -1021,6 +1024,8 @@
 
 		.product {
 			flex: 1 0 100%;
+			transform: translateX(calc(var(--diff) * -1px));
+			transition: transform 0.4s ease-in;
 
 			.product-client {
 				display: flex;
