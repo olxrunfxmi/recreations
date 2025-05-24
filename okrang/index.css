@@ -216,7 +216,6 @@
 
 	.footer {
 		font-size: 14px;
-		margin-block: 120px;
 
 		.wrapper {
 			display: flex;
@@ -564,6 +563,57 @@
 		}
 	}
 
+	#cta {
+		padding-inline: 24px;
+		.wrapper {
+			padding-block: 0;
+			margin-block: 120px;
+		}
+
+		.cta-container {
+			background: var(--purple);
+			color: var(--white);
+			border-radius: 8px;
+			position: relative;
+			overflow: hidden;
+
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
+
+			padding: clamp(45px, 6vw, 76px) clamp(45px, 6vw, 96px);
+
+			h2 {
+				font-size: 30px;
+				line-height: 1.25;
+				max-width: 445px;
+				margin: 0;
+			}
+
+			.alt {
+				background-color: var(--white);
+				color: var(--dark-blue);
+				font-size: 15px;
+			}
+
+			h2,
+			p,
+			button {
+				position: relative;
+				z-index: 3;
+			}
+
+			&::before {
+				content: url("https://okra.ng/svgs/cta-pattern.svg");
+				position: absolute;
+				right: 0;
+				z-index: 2;
+			}
+		}
+	}
+
 	.feature-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(315px, 100%), 1fr));
@@ -693,5 +743,29 @@
 	#build::before,
 	#build::after {
 		display: none;
+	}
+
+	#cta {
+		padding: 0;
+
+		.wrapper {
+			margin-block: 0;
+		}
+
+		.cta-container {
+			border-radius: 0;
+			justify-content: center;
+
+			h2 {
+				text-align: center;
+				font-size: 24px;
+			}
+
+			&::before {
+				content: url("https://okra.ng/svgs/cta-pattern-mobile.svg");
+				left: 0;
+				bottom: -10px;
+			}
+		}
 	}
 }
