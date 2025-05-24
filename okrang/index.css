@@ -350,6 +350,151 @@
 		}
 	}
 
+	#coverage {
+		color: var(--grey-text);
+
+		.wrapper {
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			padding-block: 0;
+
+			& > * {
+				flex: 1 1 0;
+			}
+		}
+
+		.coverage-start {
+			padding-block: 120px;
+
+			h2 {
+				font-size: 32px;
+				line-height: 1.25;
+			}
+
+			p {
+				margin-block-end: 38px;
+			}
+		}
+
+		.logo-container {
+			width: 554px;
+			height: 565px;
+			position: relative;
+			overflow: hidden;
+
+			[data-value="zenith"] {
+				top: 2px;
+				left: 35%;
+				--delay: 1s;
+			}
+
+			[data-value="fbn"] {
+				top: 80px;
+				left: 15%;
+				--delay: 1.25s;
+			}
+
+			[data-value="absa"] {
+				top: 120px;
+				left: 55%;
+				--delay: 1.5s;
+			}
+
+			[data-value="gtb"] {
+				top: 240px;
+				left: 35%;
+				--delay: 1.75s;
+			}
+
+			[data-value="access"] {
+				top: 280px;
+				left: 65%;
+				--delay: 2s;
+			}
+
+			[data-value="uba"] {
+				top: 260px;
+				left: 5%;
+				--delay: 2.25s;
+			}
+
+			[data-value="tyme"] {
+				top: 390px;
+				left: 15%;
+				--delay: 2.5s;
+			}
+
+			[data-value="standard"] {
+				top: 420px;
+				left: 45%;
+				--delay: 2.75s;
+			}
+
+			[data-value="stanbic"] {
+				top: 590px;
+				left: 2%;
+				--delay: 3s;
+			}
+
+			[data-value="paga"] {
+				top: 585px;
+				left: 40%;
+				--delay: 3.25s;
+			}
+
+			[data-value="kuda"] {
+				top: 590px;
+				left: 65%;
+				--delay: 3.5s;
+			}
+
+			[data-value="paystack"] {
+				top: 700px;
+				left: 45%;
+				--delay: 3.75s;
+			}
+		}
+
+		.img-wrapper {
+			border-radius: 50%;
+			/* overflow: hidden; */
+			position: absolute;
+			animation: movement 40s var(--delay) linear both infinite;
+
+			img {
+				width: 100%;
+			}
+
+			&.big {
+				width: 170px;
+				height: 170px;
+			}
+
+			&.medium {
+				width: 120px;
+				height: 120px;
+			}
+
+			&.small {
+				width: 80px;
+				height: 80px;
+			}
+
+			&:hover::after {
+				content: attr(data-info);
+				position: absolute;
+				white-space: nowrap;
+				color: var(--grey-text);
+				background: var(--white);
+				border-radius: 24px;
+				padding: 4px 10px;
+				font-size: 13px;
+				box-shadow: 0 8px 16px rgba(98, 116, 144, 0.16);
+			}
+		}
+	}
+
 	#build {
 		background: var(--dark-blue);
 		color: var(--white);
@@ -492,6 +637,26 @@
 @keyframes gradient-text {
 	to {
 		background-position: -200%;
+	}
+}
+
+@keyframes movement {
+	from {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateX(-20px) translateY(-675px);
+	}
+
+	to {
+		transform: translateY(-800px);
+	}
+}
+
+@media (width <=1000px) {
+	.logo-container {
+		display: none;
 	}
 }
 
