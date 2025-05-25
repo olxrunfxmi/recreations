@@ -288,6 +288,24 @@
 		padding-block: 120px;
 	}
 
+	.banner {
+		background: #040709;
+		height: 56px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: url("https://okra.ng/svgs/banner-pattern.svg");
+			left: 0;
+		}
+
+		&::after {
+			position: absolute;
+			content: url("https://okra.ng/svgs/banner-pattern2.svg");
+			right: 0;
+		}
+	}
+
 	#header {
 		font-size: 15px;
 		font-weight: 600;
@@ -1248,6 +1266,11 @@
 }
 
 @media (width <= 700px) {
+	.banner::before,
+	.banner::after {
+		display: none;
+	}
+
 	.footer-columns {
 		.case-dev {
 			grid-row: 2;
