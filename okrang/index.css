@@ -326,6 +326,10 @@
 				align-items: center;
 				justify-content: space-between;
 
+				li:hover > .dropdown {
+					display: flex;
+				}
+
 				.nav-crumb {
 					font: inherit;
 					color: inherit;
@@ -335,10 +339,6 @@
 					cursor: pointer;
 					position: relative;
 					z-index: 3;
-
-					&:hover + .dropdown {
-						display: flex;
-					}
 				}
 
 				.dropdown {
