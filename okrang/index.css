@@ -497,6 +497,7 @@
 					border: none;
 					padding: 0px;
 					margin-inline-start: 12px;
+					cursor: pointer;
 
 					.menu-icon {
 						display: inline-block;
@@ -508,6 +509,8 @@
 							width: 24px;
 							height: 2px;
 							background: var(--dark-blue);
+							transform: rotate(0);
+							/* transition: transform 0.4s ease-in; */
 						}
 
 						.menu-middle,
@@ -528,7 +531,7 @@
 						}
 
 						.menu-bottom {
-							transform: rotate(317deg);
+							transform: rotate(-43deg);
 							transform-origin: top left;
 							transition: transform 0.4s linear;
 						}
@@ -1203,7 +1206,7 @@
 }
 
 @media (width < 1200px) {
-	body {
+	body[data-overflow="true"] {
 		overflow: hidden;
 	}
 
@@ -1213,82 +1216,96 @@
 
 	/*  */
 	.menu {
-		height: calc(100vh - 56px);
-	}
+		.link-holders {
+			position: absolute;
+			/* top: 100%; */
+			top: 80px;
+			left: 0;
+			right: 0;
+			bottom: 0;
 
-	.link-holders {
-		position: absolute;
-		/* top: 100%; */
-		top: 80px;
-		left: 0;
-		right: 0;
-		bottom: 0;
+			display: grid;
+			align-content: start;
 
-		display: grid;
-		align-content: start;
+			background: var(--white);
+			z-index: 5;
 
-		background: var(--white);
-		z-index: 5;
+			/* height: calc(100vh - 80px - 56px); */
+			overflow: auto;
 
-		/* height: calc(100vh - 80px - 56px); */
-		overflow: auto;
-
-		.start {
-			margin-inline: 0;
-		}
-
-		li {
-			padding-block: 10px;
-
-			&:hover > .dropdown {
-				display: none;
+			.start {
+				margin-inline: 0;
 			}
 
-			&[data-state="open"] {
-				background: var(--grey);
+			li {
+				padding-block: 10px;
 
-				.dropdown {
-					position: static;
+				&:hover > .dropdown {
+					display: none;
+				}
 
-					display: flex;
-					flex-direction: column;
+				&[data-open="open"] {
+					background: var(--grey);
 
-					box-shadow: none;
+					.dropdown {
+						position: static;
 
-					.dropdown-frame {
-						padding: 0;
-					}
+						display: flex;
+						flex-direction: column;
 
-					.dropdown-start,
-					.dropdown-end {
-						padding-block-start: 16px;
-						padding-inline: 48px;
+						box-shadow: none;
 
-						& > * {
-							max-width: 100%;
-						}
-					}
-
-					.dropdown-start {
-						h6 {
-							border-bottom: none;
-							display: none;
+						.dropdown-frame {
+							padding: 0;
 						}
 
-						.link-bar {
-							border-top: none;
+						.dropdown-start,
+						.dropdown-end {
+							padding-block-start: 16px;
+							padding-inline: 48px;
+
+							& > * {
+								max-width: 100%;
+							}
+						}
+
+						.dropdown-start {
+							h6 {
+								border-bottom: none;
+								display: none;
+							}
+
+							.link-bar {
+								border-top: none;
+							}
 						}
 					}
 				}
 			}
+
+			.nav-crumb {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				padding-inline: 48px;
+				padding-block: 8px;
+			}
 		}
 
-		.nav-crumb {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			padding-inline: 48px;
-			padding-block: 8px;
+		&[data-open="open"] {
+			height: calc(100vh - 56px);
+
+			.link-holders {
+				display: grid;
+			}
+		}
+
+		&[data-open="close"] {
+			height: unset;
+
+			.link-holders {
+				display: none;
+			}
 		}
 	}
 }
@@ -1424,35 +1441,44 @@
 
 @media (width <= 700px) {
 	#header {
-		.dropdown-frame {
-			grid-template-columns: 1fr;
+		.menu {
+			.login-sales-wrapper {
+				display: none;
+			}
 		}
 
-		.link-holders {
-			padding-block-end: 160px;
-		}
-
-		.login-sales-wrapper {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 5;
-			padding: 24px;
-			background: var(--white);
-			border-top: 1px solid var(--grey-stroke);
-			flex-direction: column-reverse;
-			gap: 16px;
-			align-items: stretch;
-
-			.href,
-			.btn {
-				width: 100%;
+		.menu[data-open="open"] {
+			.dropdown-frame {
+				grid-template-columns: 1fr;
 			}
 
-			.href {
-				display: inline-block;
-				text-align: center;
+			.link-holders {
+				padding-block-end: 160px;
+			}
+
+			.login-sales-wrapper {
+				display: flex;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 5;
+				padding: 24px;
+				background: var(--white);
+				border-top: 1px solid var(--grey-stroke);
+				flex-direction: column-reverse;
+				gap: 16px;
+				align-items: stretch;
+
+				.href,
+				.btn {
+					width: 100%;
+				}
+
+				.href {
+					display: inline-block;
+					text-align: center;
+				}
 			}
 		}
 	}
