@@ -37,6 +37,15 @@ const recreations = [
 		mainURL: "https://chatgpt.com",
 		recreationURL: "./chatgpt/index.html",
 	},
+	{
+		name: "Okra",
+		details:
+			"A financial data provider for banks and financial institutions via a strong API",
+		src: "https://ik.imagekit.io/ndtwmeq4p/image.png?updatedAt=1748219214259",
+		alt: "Okra",
+		mainURL: "https://okra.ng",
+		recreationURL: "./okrang/index.html",
+	},
 ];
 
 generateRecreations(recreations);
