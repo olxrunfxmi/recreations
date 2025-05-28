@@ -117,6 +117,97 @@
 	.details-pane {
 		overflow-x: hidden;
 		overflow-y: auto;
-		height: 100%;
+	}
+}
+
+@layer styling {
+	.icon {
+		img,
+		svg {
+			width: 24px;
+			height: 24px;
+			vertical-align: top;
+		}
+	}
+
+	.text {
+		font-weight: 600;
+	}
+
+	.top-bar {
+		background: #e8e8e8;
+		padding-inline: 8px;
+
+		.switcher {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 8px;
+			max-width: 240px;
+			background: #f8f8f8;
+			border: 1px solid #dadada;
+			border-bottom: none;
+			border-radius: 7px 7px 0 0;
+
+			.icon:last-child {
+				margin-inline-start: auto;
+			}
+		}
+	}
+
+	.tool-bar {
+		display: grid;
+		grid-template-columns: auto 2.5fr 1fr;
+		gap: 8px;
+
+		padding-block: 7px;
+		padding-inline: 20px 12px;
+		background: #f8f8f8;
+		border: 1px solid #dadada;
+
+		.icons-group {
+			display: flex;
+			gap: 24px;
+			align-items: center;
+		}
+
+		.address-bar {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			padding: 10px;
+			background: white;
+			border-radius: 4px;
+			border-bottom: 2px solid transparent;
+
+			&:active,
+			&:focus {
+				outline: none;
+				border-bottom: 2px solid #0067c0;
+
+				.icon {
+					display: none;
+				}
+			}
+		}
+
+		.search {
+			input {
+				width: 100%;
+				padding: 10px;
+				border: none;
+				border-radius: 4px;
+
+				&:active,
+				&:focus {
+					outline: none;
+					border-bottom: 2px solid #0067c0;
+				}
+			}
+		}
+	}
+
+	.navigation-bar {
+		border-right: 1px solid #eae8e8;
 	}
 }
