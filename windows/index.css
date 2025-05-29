@@ -385,6 +385,9 @@
 			p {
 				margin: 0;
 				flex-basis: 250px;
+				text-wrap: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 	}
