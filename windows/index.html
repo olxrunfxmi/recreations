@@ -181,17 +181,80 @@
                 <input type="search" name="" id="" placeholder="Search Home">
             </div>
         </div>
+        <div class="activity-bar"></div>
     </header>
     <main>
         <div class="navigation-bar">
             <nav>
                 <ul id="main">
-                    <li>
-                        <span class="icon"></span>
+                    <li data-active="true">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32px" height="32px"
+                                baseProfile="basic">
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3a" x1="16" x2="16" y1="10.987" y2="14.001"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#e03c22" />
+                                    <stop offset="1" stop-color="#c22e17" />
+                                </linearGradient>
+                                <rect width="24" height="3" x="4" y="11" fill="url(#Ub349SazE1hDrCHIJWdu3a)" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3b" x1="16" x2="16" y1="11" y2="14"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-opacity=".02" />
+                                    <stop offset="1" stop-opacity=".15" />
+                                </linearGradient>
+                                <path fill="url(#Ub349SazE1hDrCHIJWdu3b)"
+                                    d="M27.75,11.25v2.5H4.25v-2.5H27.75 M28,11 H4v3h24V11L28,11z" />
+                                <polygon fill="#ffcb52" points="27,27 5,27 5,12 15.874,4 27,12" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3c" x1="16" x2="16" y1="4" y2="27"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-opacity=".02" />
+                                    <stop offset="1" stop-opacity=".15" />
+                                </linearGradient>
+                                <path fill="url(#Ub349SazE1hDrCHIJWdu3c)"
+                                    d="M15.876,4.309l10.874,7.819V26.75H5.25 V12.126L15.876,4.309 M15.874,4L5,12v15h22V12L15.874,4L15.874,4z" />
+                                <polygon points="5,11.63 5,13.923 16,6.144 27,13.923 27,11.63 15.874,3.63"
+                                    opacity=".09" />
+                                <polygon points="5,11.305 5,13.598 16,5.82 27,13.598 27,11.305 15.874,3.305"
+                                    opacity=".09" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3d" x1="16" x2="16" y1="15.952" y2="27.005"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#d65e23" />
+                                    <stop offset=".998" stop-color="#bf4d14" />
+                                </linearGradient>
+                                <rect width="8" height="11" x="12" y="16" fill="url(#Ub349SazE1hDrCHIJWdu3d)" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3e" x1="16" x2="16" y1="16" y2="27"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-opacity=".02" />
+                                    <stop offset="1" stop-opacity=".15" />
+                                </linearGradient>
+                                <path fill="url(#Ub349SazE1hDrCHIJWdu3e)"
+                                    d="M19.75,16.25v10.5h-7.5v-10.5H19.75 M20,16 h-8v11h8V16L20,16z" />
+                                <circle cx="18.5" cy="22.5" r=".5" fill="#ffaa42" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3f" x1="16" x2="16" y1="2.691" y2="14.005"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#ff624a" />
+                                    <stop offset=".247" stop-color="#ff5940" />
+                                    <stop offset=".672" stop-color="#fd4224" />
+                                    <stop offset="1" stop-color="#fc2c0a" />
+                                </linearGradient>
+                                <path fill="url(#Ub349SazE1hDrCHIJWdu3f)"
+                                    d="M16,5.515L28,14v-3L16.577,2.923 c-0.346-0.245-0.809-0.245-1.155,0L4,11v3L16,5.515z" />
+                                <linearGradient id="Ub349SazE1hDrCHIJWdu3g" x1="16" x2="16" y1="2.739" y2="14"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-opacity=".02" />
+                                    <stop offset="1" stop-opacity=".15" />
+                                </linearGradient>
+                                <path fill="url(#Ub349SazE1hDrCHIJWdu3g)"
+                                    d="M16,2.989c0.156,0,0.306,0.048,0.433,0.138 l11.317,8.002v2.388L16.144,5.311L16,5.209l-0.144,0.102L4.25,13.517v-2.388l11.317-8.002C15.694,3.037,15.844,2.989,16,2.989 M16,2.739c-0.202,0-0.404,0.061-0.577,0.184L4,11v3l12-8.485L28,14v-3L16.577,2.923C16.404,2.801,16.202,2.739,16,2.739L16,2.739z" />
+                            </svg>
+                        </span>
                         <span class="text">Home</span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACzUlEQVR4nO3WSU9TYRgF4LP0V8jPABZOjCLUMog2sKAghBhiFBOBOKFhkLEMpYA2iqIQGUQhICogcwFFDUEQIYZ5igsJKG1DwjHXTyFyawqWu5I3edLk/W7OPf26KbA3e/NrlrQwrWhBJSxp0QV7sxIFmqOVIWXbLxADms8qQ8q2X+A8aL7gOEuyE9eqI35+/t5J2XYLLF8EzfGOW59uIb+NcX2qaWMnZeN6D6GfE/KneuQ3cAm0XHHc+kyzKDDdtLGTspHcRxQvCIWz8htZuQZabjjOmufEtfpwWnP3b+ykbKT2EcYFoXhGXmA5CbSkKkPKRnovcXdeME7bKJAGWjI3mTPAxXhwMgZciANXt5zvhJSNTBNxb1a4M2HjJ8gGrbnCUhL4KRIcDN00HAbOx4MW3eZzW1lybO+lbGSZiNJZocRGgeU88HsOOHEOHAj5u6FwcPEqaCkArQbhaxo4Ei3ORyPBL4l/nkvZyOkmymaE0nF5gfE4cCAUfK/ZnuHT4FwiOHgGbPUDO/3BnkDwdTD4TgMOacH5y+CqVMAAIr+beDQtPPwsL9AdBL4J3rmuAPCFD9h4FGz2BdvVYHcg2HcCfHsK/BAGTiaA0HcSFZNC+Zi8QLtafIN/1aYCG7yEl8fAVpUo1xsEmoJAGDqI6gmhYlReoFkFdqgdJ728zh2s9xQ388oPbFGBKGwjasaFyhF5gefSw767o8UXbPAEa9zAOg+w1gtE7AOiqJ94PEZUf5QXqPUAG7131zMv8KkbWH4QREQREfuESKgndO3yAlVHwFp3ZVQeBqHJJqLKiOhyIuq+vEDZAbDqkDKkbKhSiBAjEWokQorkBW45w1TiCipB77qPUGcRgQYioIDwz7X//wA+KYRfxu44riNOGglNCRFQSHinb6OAXwGhvq0MX/02CrjpCE+9MqRsu+OS1A+Xm1SEc8qK/QJ787/MDw01fpxPcqEZAAAAAElFTkSuQmCC"
+                                alt="">
+                        </span>
                         <span class="text">Gallery</span>
                     </li>
                 </ul>
@@ -199,32 +262,96 @@
             <nav>
                 <ul id="recent">
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-desktop-folder-48.png" alt="">
+                        </span>
                         <span class="text">Desktop</span>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_294_119" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="25" height="25">
+                                    <rect x="0.492188" y="0.740234" width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_294_119)">
+                                    <path
+                                        d="M16.4922 12.7402L18.4922 14.7402V16.7402H13.4922V22.7402L12.4922 23.7402L11.4922 22.7402V16.7402H6.49219V14.7402L8.49219 12.7402V5.74023H7.49219V3.74023H17.4922V5.74023H16.4922V12.7402Z"
+                                        fill="#95A0A6" />
+                                </g>
+                            </svg>
+                        </span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-downloads-folder-48.png" alt="">
+                        </span>
                         <span class="text">Downloads</span>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_294_119" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="25" height="25">
+                                    <rect x="0.492188" y="0.740234" width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_294_119)">
+                                    <path
+                                        d="M16.4922 12.7402L18.4922 14.7402V16.7402H13.4922V22.7402L12.4922 23.7402L11.4922 22.7402V16.7402H6.49219V14.7402L8.49219 12.7402V5.74023H7.49219V3.74023H17.4922V5.74023H16.4922V12.7402Z"
+                                        fill="#95A0A6" />
+                                </g>
+                            </svg>
+                        </span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-document.svg" alt="" srcset="">
+                        </span>
                         <span class="text">Documents</span>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_294_119" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="25" height="25">
+                                    <rect x="0.492188" y="0.740234" width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_294_119)">
+                                    <path
+                                        d="M16.4922 12.7402L18.4922 14.7402V16.7402H13.4922V22.7402L12.4922 23.7402L11.4922 22.7402V16.7402H6.49219V14.7402L8.49219 12.7402V5.74023H7.49219V3.74023H17.4922V5.74023H16.4922V12.7402Z"
+                                        fill="#95A0A6" />
+                                </g>
+                            </svg>
+                        </span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-picture.svg" alt="">
+                        </span>
                         <span class="text">Pictures</span>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_294_119" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="25" height="25">
+                                    <rect x="0.492188" y="0.740234" width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_294_119)">
+                                    <path
+                                        d="M16.4922 12.7402L18.4922 14.7402V16.7402H13.4922V22.7402L12.4922 23.7402L11.4922 22.7402V16.7402H6.49219V14.7402L8.49219 12.7402V5.74023H7.49219V3.74023H17.4922V5.74023H16.4922V12.7402Z"
+                                        fill="#95A0A6" />
+                                </g>
+                            </svg>
+                        </span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-music.svg" alt="">
+                        </span>
                         <span class="text">Music</span>
                         <span class="icon"></span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-folder-48 (4).png" alt="" srcset="">
+                        </span>
                         <span class="text">Videos</span>
                         <span class="icon"></span>
                     </li>
@@ -233,15 +360,21 @@
             <nav>
                 <ul id="user">
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-this-pc-48.png" alt="">
+                        </span>
                         <span class="text">This PC</span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/icons8-shared-folder-48.png" alt="">
+                        </span>
                         <span class="text">Network</span>
                     </li>
                     <li>
-                        <span class="icon"></span>
+                        <span class="icon">
+                            <img src="./asset/icons/svgs/linux.png" alt="">
+                        </span>
                         <span class="text">Linux</span>
                     </li>
                 </ul>
@@ -290,8 +423,32 @@
     <footer>
         <p>38 items</p>
         <div class="group">
-            <span class="icon"></span>
-            <span class="icon"></span>
+            <span class="icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_298_131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
+                        height="25">
+                        <rect x="0.439453" y="0.113281" width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_298_131)">
+                        <path
+                            d="M3.93945 21.6133V20.1133H20.9395V21.6133H3.93945ZM3.93945 15.7768V14.2768H20.9395V15.7768H3.93945ZM3.93945 9.94978V8.44978H20.9395V9.94978H3.93945ZM3.93945 4.11328V2.61328H20.9395V4.11328H3.93945Z"
+                            fill="#1C1B1F" />
+                    </g>
+                </svg>
+            </span>
+            <span class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_298_137" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                        height="24">
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_298_137)">
+                        <path
+                            d="M12 13.6923L1.50977 8.09625L12 2.5L22.5 8.09625L12 13.6923ZM12 17.596L2.08477 12.3155L3.65577 11.4537L12 15.8885L20.3538 11.4537L21.925 12.3155L12 17.596ZM12 21.5L2.08477 16.2193L3.65577 15.3577L12 19.7922L20.3538 15.3577L21.925 16.2193L12 21.5ZM12 11.9848L19.373 8.09625L12 4.20775L4.63652 8.09625L12 11.9848Z"
+                            fill="#1C1B1F" />
+                    </g>
+                </svg>
+            </span>
         </div>
     </footer>
 </body>
