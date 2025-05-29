@@ -105,6 +105,7 @@
 
 		display: grid;
 		grid-template-rows: auto 1fr auto;
+		cursor: url(./asset/icons/svgs/icons8-cursor.svg), auto;
 	}
 
 	main {
@@ -227,6 +228,29 @@
 		}
 	}
 
+	.activity-bar {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding: 12px 20px;
+		border-bottom: 1px solid #d6d6d6;
+
+		.activity {
+			display: flex;
+			gap: 4px;
+
+			&:last-of-type {
+				margin-inline-start: auto;
+			}
+		}
+
+		.sideline {
+			padding-inline-end: 16px;
+			padding-block: 4px;
+			border-right: 1px solid #f0f0f0;
+		}
+	}
+
 	.navigation-bar {
 		border-right: 1px solid #eae8e8;
 		padding-inline: 4px;
@@ -258,6 +282,7 @@
 
 				&:hover {
 					background: #e5f3ff;
+					cursor: url(./asset/icons/svgs/cursor-pointer.png), auto;
 				}
 
 				.icon:last-child {
