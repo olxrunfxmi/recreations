@@ -93,3 +93,55 @@
 		scroll-margin-block: 5ex;
 	}
 }
+
+@layer base {
+	:root {
+		--dt-white: #fff;
+		--dt-purple: #7234f0;
+		--dt-green: #03ef62;
+		--dt-black: #000820;
+		--dt-black-light: #030b24;
+		--dt-green-dark: #02c155;
+		--dt-dark: #05192d;
+		--dt-grey: #697581;
+		--dt-grey-dark: #e0e1e9;
+		--dt-grey-darker: #efeff5;
+		--dt-bg-grey: #f7f7fc;
+		--dt-grey-hover: #f3f3f6;
+		--dt-text-on-black: #ccced2;
+	}
+}
+
+@layer styling {
+	.container {
+		height: 100vh;
+
+		display: flex;
+		flex-direction: column;
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-wrapper {
+            flex: 1 1 0;
+    
+            display: flex;
+            min-height: 0;
+    
+            section.menu-bar {
+                flex-basis: 230px;
+            }
+    
+            main {
+                flex: 1 1 0;
+                overflow-y: auto;
+                min-height: 0;
+            }
+        }
+	}
+
+
+}
