@@ -214,6 +214,15 @@
 			}
 		}
 
+		&.white {
+			background: var(--dt-white);
+			border: 2px solid var(--dt-grey-dark);
+
+			&:hover {
+				background: var(--dt-grey-hover);
+			}
+		}
+
 		&.small {
 			padding: 8px 16px;
 			font-size: 14px;
@@ -263,6 +272,8 @@
 		box-shadow: 0px 1px 4px -1px rgba(48, 57, 105, 0.3);
 		height: 60px; /* Just for Now*/
 		gap: 8px;
+		position: relative;
+		z-index: 2;
 
 		#menu-button {
 			display: none;
@@ -308,6 +319,7 @@
 
 				.dropdown-list {
 					display: block;
+					z-index: 2;
 				}
 			}
 
@@ -622,7 +634,43 @@
 	}
 
 	.main-section {
-		padding: 32px;
+		.learning-container {
+			padding: 32px;
+		}
+
+		.section-heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
+			margin-block-end: 12px;
+
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 18px;
+				margin-inline-end: auto;
+			}
+
+			.heading-link {
+				color: #0065d1;
+				padding: 6px 10px;
+				display: inline-block;
+				border-radius: 4px;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 500;
+				text-wrap: nowrap;
+
+				&:hover {
+					background: #ebebf3;
+				}
+			}
+		}
 
 		.learn {
 			background: var(--dt-white);
@@ -726,6 +774,21 @@
 				box-shadow: 0px 3px 5px -1px rgba(48, 57, 105, 0.3);
 			}
 		}
+
+		footer {
+			background: var(--dt-grey-darker);
+			padding: 32px;
+			display: grid;
+			place-content: center;
+			min-height: 250px;
+
+			h3 {
+				margin: 0;
+				margin-block-end: 16px;
+				font-size: 18px;
+				text-align: center;
+			}
+		}
 	}
 }
 
@@ -760,7 +823,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			z-index: 3;
+			z-index: 4;
 
 			.text {
 				font-size: 16px;
@@ -779,7 +842,7 @@
 			width: 100%;
 			height: 100%;
 			position: absolute;
-			z-index: 2;
+			z-index: 3;
 		}
 	}
 	@media (width <= 760px) {
@@ -798,7 +861,10 @@
 		}
 
 		.main-section {
-			padding: 16px;
+			.learning-container,
+			footer {
+				padding: 16px;
+			}
 		}
 
 		.learn {
@@ -812,6 +878,18 @@
 
 			.button-wrapper > :only-child {
 				display: block;
+			}
+		}
+	}
+
+	@media (width <= 520px) {
+		footer {
+			grid-template-columns: 1fr;
+
+			.button-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
 			}
 		}
 	}
@@ -834,6 +912,12 @@
 
 			& > span:last-child {
 				display: block;
+			}
+		}
+
+		.section-heading {
+			.text {
+				display: none;
 			}
 		}
 	}
