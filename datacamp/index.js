@@ -2,6 +2,7 @@ const openerEl = document.querySelector(".opener");
 const menuEl = document.querySelector("#menu-button");
 const menuBarEl = document.querySelector(".menu-bar");
 const backgroundEl = document.querySelector(".background");
+const mainLinkButtonEl = document.querySelector("#main-links");
 
 openerEl.addEventListener("click", () => {
 	openerEl.parentElement.dataset.open =
@@ -15,8 +16,12 @@ menuEl.addEventListener("click", (e) => {
 });
 
 backgroundEl.addEventListener("click", () => {
-	console.log("EEEE");
 	menuBarEl.dataset.menu = menuBarEl.dataset.menu === "open" ? "close" : "open";
 	backgroundEl.dataset.menu =
 		backgroundEl.dataset.menu === "open" ? "close" : "open";
+});
+
+mainLinkButtonEl.addEventListener("click", () => {
+	mainLinkButtonEl.dataset.open =
+		mainLinkButtonEl.dataset.open === "true" ? "false" : "true";
 });
