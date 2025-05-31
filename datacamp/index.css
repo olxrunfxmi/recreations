@@ -110,38 +110,117 @@
 		--dt-grey-hover: #f3f3f6;
 		--dt-text-on-black: #ccced2;
 	}
+
+	body {
+		font-family: "Inter", sans-serif;
+	}
 }
 
 @layer styling {
+	svg {
+		vertical-align: middle;
+	}
+
+	.btn {
+		background: var(--dt-green);
+		border-radius: 2px;
+		padding: clamp(6px, calc(0.55vw + 0.25em), 12px)
+			clamp(12px, calc(1.25vw + 0.5em), 24px);
+		font-weight: 600;
+		text-wrap: nowrap;
+
+		&.dark {
+			background: var(--dt-dark);
+			color: var(--dt-white);
+			border: 1px solid var(--dt-white);
+		}
+	}
+
 	.container {
 		height: 100vh;
 
 		display: flex;
 		flex-direction: column;
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+		.banner,
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-        .flex-wrapper {
-            flex: 1 1 0;
-    
-            display: flex;
-            min-height: 0;
-    
-            section.menu-bar {
-                flex-basis: 230px;
-            }
-    
-            main {
-                flex: 1 1 0;
-                overflow-y: auto;
-                min-height: 0;
-            }
-        }
+		.flex-wrapper {
+			flex: 1 1 0;
+
+			display: flex;
+			min-height: 0;
+
+			section.menu-bar {
+				flex-basis: 230px;
+			}
+
+			main {
+				flex: 1 1 0;
+				overflow-y: auto;
+				min-height: 0;
+			}
+		}
 	}
 
+	.banner {
+		gap: 16px;
+		padding-inline: clamp(20px, 3.5vw, 48px);
+		padding-block: clamp(12px, calc(1.25vw + 0.5em), 24px);
+		background: url(https://media.datacamp.com/cms/bg-banner-radar-ai-edition-2025.webp);
+		color: var(--dt-white);
 
+		.img-left {
+			width: clamp(100px, 25vw, 225px);
+		}
+
+		.text-wrapper {
+			h6 {
+				font-size: clamp(18px, 2vw, 24px);
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.button-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.icon {
+			svg {
+				width: 24px;
+				height: 24px;
+
+				& g path {
+					fill: var(--dt-white);
+				}
+			}
+		}
+	}
+}
+
+@layer media {
+	@media (width <= 760px) {
+		.banner {
+			.text-wrapper {
+				display: none;
+			}
+		}
+	}
+
+	@media (width <=360px) {
+		.banner {
+			.button-wrapper {
+				.icon {
+					display: none;
+				}
+			}
+		}
+	}
 }
