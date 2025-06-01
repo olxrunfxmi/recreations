@@ -46,6 +46,23 @@ const recreations = [
 		mainURL: "https://okra.ng",
 		recreationURL: "./okrang/index.html",
 	},
+	{
+		name: "Windows",
+		details: "The UI of the Windows Explorer",
+		src: "https://ik.imagekit.io/ndtwmeq4p/image.png",
+		alt: "Windows Explorer UI",
+		mainURL: "https://windows.com",
+		recreationURL: "./window/index.html",
+	},
+	{
+		name: "DataCamp",
+		details:
+			"A learning platform to learn Data science and data-related subject matters",
+		src: "https://ik.imagekit.io/ndtwmeq4p/datacamp.png",
+		alt: "Datacamp Learn Dashboard",
+		mainURL: "https://app.datacamp.com/learn",
+		recreationURL: "./datacamp/index.html",
+	},
 ];
 
 generateRecreations(recreations);
