@@ -3,6 +3,7 @@ const menuEl = document.querySelector("#menu-button");
 const menuBarEl = document.querySelector(".menu-bar");
 const backgroundEl = document.querySelector(".background");
 const mainLinkButtonEl = document.querySelector("#main-links");
+const cancelBannerButtonEl = document.querySelector("#cancel-banner");
 
 openerEl.addEventListener("click", () => {
 	openerEl.parentElement.dataset.open =
@@ -24,4 +25,8 @@ backgroundEl.addEventListener("click", () => {
 mainLinkButtonEl.addEventListener("click", () => {
 	mainLinkButtonEl.dataset.open =
 		mainLinkButtonEl.dataset.open === "true" ? "false" : "true";
+});
+
+cancelBannerButtonEl.addEventListener("click", () => {
+	cancelBannerButtonEl.parentElement.parentElement.remove();
 });

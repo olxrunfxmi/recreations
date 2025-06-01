@@ -233,6 +233,10 @@
 		}
 	}
 
+	#cancel-banner {
+		cursor: pointer;
+	}
+
 	.banner {
 		gap: 16px;
 		padding-inline: clamp(20px, 3.5vw, 48px);
@@ -640,6 +644,8 @@
 	.main-section {
 		.learning-container {
 			padding: 32px;
+			max-width: 1200px;
+			margin-inline: auto;
 		}
 
 		.welcome {
